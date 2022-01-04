@@ -4,7 +4,11 @@ A Machine Learning project is typically split into two phases, experimentation &
 
 **Experimentation:** An iterative process that attempts to demonstrate that ML is an effective solution to a problem.
 
-**Production:** The process of converting an ML experiment into a robust form, wrapped around supporting software towards delivering business value.
+This phase is my current focus - making the tooling and processes as templatable and adhering to development best practices. 
+
+**Production:** The process of converting an ML experiment into a robust form, wrapped around supporting software towards delivering business value. 
+
+At the time of writing, I will adapt the production phase to the needs of the consumer (product team etc) rather than forcing integration with platforms or adapting a fixed point of integration.
 
 ## Experimentation
 
