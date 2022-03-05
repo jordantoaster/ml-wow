@@ -16,16 +16,17 @@ This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) in
 
 ### Preferred Options 
 - Docker for local development using a Python image, supported by a requirements.txt file.
+    - This allows the use of local IDE for ease of debugging and offers greater development agility.
 
 ### Alternative Options
 - Virtual environments.
-- Anaconda
+- Anaconda.
 
 ## #2 Project Scaffolding
 
 ### Preferred Options
 - Kedro, in its recommended usage pattern.
-    - Example: Product auto matching project.
+    - Example: ML Mumford Member auto matching project.
 
 ### Alternative Options
 - Custom project structures.
@@ -33,10 +34,10 @@ This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) in
 ## #3 Flexible Compute
 
 ### referred Options
-- Sagemaker Notebooks - Studio or managed Notebook instance during the iterate experimentation phase.
+- Sagemaker Notebooks - Studio or managed Notebook instance during the iterative experimentation phase.
+    - If required, running Kedro inside Sagemaker Notebook using the terminal is also an accepted usage pattern as long as credentials are avaliable.
+    - Sagemaker Studio based commits required a personal access token from GitHub.
 - Sagemaker processing and training jobs for "off notebook" workloads.
-    - GPU
-    - Cases of long wait times that slow development agility.
 
 ### Alternate Options
 - N/A
@@ -47,12 +48,10 @@ This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) in
 ## #4 Artifact Versioning
 
 ### Preferred Options
-- Kedro versioning to cloud storage.
-    - AWS credentials give flexible regardless of development environment.
+- Kedro versioning to cloud storage (S3)
 
 ### Alternate Options
 - N/A
-    - Possibly MLFlow? (Pending)
     - Sagemaker Feature Store?
 
 ## #5 Experiment Tracking
@@ -60,51 +59,42 @@ This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) in
 The ability to capture the results of an ML experiment **and** reproduce on demand.
 
 ### Preferred Options
-- N/A
+- Sagemaker Experiment Tracking
+    - Offers the ability to capture metrics from training jobs using Regex and capturing any desired metadata using the Sagemaker SDK. 
 
 ### Alternate Options
 - N/A
-    - MLFlow
     - DVC Pipelines
-    - Sagemaker Experiments?
-        - Limited to use when used as part of Sagemaker training jobs.
 
-## #6 Data/Model/Concept Drift Detection
+## #6 Model Monitoring (Observability)
 
 ### Preferred Options
 - N/A
 
 ### Alternate Options
 - N/A
+    - Tracking changes in the features the model uses in Datadog or other monitoring tool.
     - Great Expectations?
         - Flexible for any solution with apprioriate alerting.
     - Sagemaker Endpoints
         - Only suitable for model deployed to an endpoint on Sagemaker.
 
-## #7 Model Monitoring (Observability)
+## #7 ML Pipelines
+
+A central pipeline for preparing data and training ML model in a single click/command/schedule. The output being a /datamodel or multiple data/model artifacts.
 
 ### Preferred Options
-- N/A
-
-### Alternate Options
-- N/A
-    - Custom Datadog dashboards
-
-## #8 ML Pipelines
-
-A central pipeline for preparing data and training ML model in a single click/command/schedule. The output being a model or multiple model artifacts.
-
-### Preferred Options
-- N/A
+- Kedro
 
 ### Alternate Options
 - DVC?
 - Sagemaker Pipelines?
 
-## #9 XAI and Bias
+## #8 XAI and Bias
 
 ### Preferred Options
 - SHAP + feature attribution from models.
+    - As it stands, applied only during the experimention phase effectively. 
 
 ### Alternate Options
 - Sagemaker Clarify?
@@ -117,6 +107,6 @@ A central pipeline for preparing data and training ML model in a single click/co
 ---
 WIP Other possible topics:
 - Automated retraining.
-- Alerting
+- Alerting - Pager Duty via Datadog Monitors?
 
 
