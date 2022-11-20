@@ -29,6 +29,7 @@
 - Chatbots
 - OCR
 - Translation
+- Information Retrieval (For text X, give me result Y)
 
 ## Other
 
