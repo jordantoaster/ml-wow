@@ -45,6 +45,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
     - SME knowledge required?
 - Consider the use of a feature store
     - Sagemaker feature store (Offline in S3, or online in a low latency DB, or both.)
+- Is synthetic data required?
 
 
 ### 4. EDA
