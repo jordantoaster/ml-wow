@@ -50,4 +50,4 @@
 - Predictive maintenance
 - Search/similarity detection
 - Document comparison
-- Risk Estimation (underwriting)
+- Risk Estimation/Rating (underwriting)
