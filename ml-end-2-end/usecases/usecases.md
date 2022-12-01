@@ -14,6 +14,7 @@
 - Pose estimation
 - Action detection (hand up, punch etc.)
 - Segmentation (VIN Numbers)
+- Pothole Detection
 
 ## NLP
 
@@ -53,3 +54,4 @@
 - Risk Estimation/Rating (underwriting)
 - Digital Assistant / Co-bot
 - Personalised Shopping (Review Ordering et al).
+- Satellite sensor for agriculature - soil nutrition monitoring.
