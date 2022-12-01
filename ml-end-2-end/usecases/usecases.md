@@ -51,3 +51,4 @@
 - Search/similarity detection
 - Document comparison
 - Risk Estimation/Rating (underwriting)
+- Digital Assistant / Co-bot
