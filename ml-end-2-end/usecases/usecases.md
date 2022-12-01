@@ -52,4 +52,4 @@
 - Document comparison
 - Risk Estimation/Rating (underwriting)
 - Digital Assistant / Co-bot
-- Personalised Shopping
+- Personalised Shopping (Review Ordering et al).
