@@ -1,6 +1,6 @@
 # Sagemaker General Thoughts
 
-## Planned Use of Sagemaker
+## Potential Use of Sagemaker
 
 ### Experimentation
 

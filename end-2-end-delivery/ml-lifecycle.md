@@ -1,18 +1,26 @@
 # ML Project Lifecycle
 
-A Machine Learning project is typically split into two phases, experimentation & production.
+A Machine Learning project is typically split into two phases, **experimentation** & **production**. This docoument outlines the key milestones that are typically ecnountered across both of those phases of work in an end to end project delivery. 
 
-**Experimentation:** An iterative process that attempts to demonstrate that ML is an effective solution to a problem.
+Note: A key differentiator between ML engineering and software engineering is the dependency on data. It’s common to think of an ML model as the
+output of both programming code and the data. As a result, there are more risks of things can going wrong in machine learning applications
+
+## Phase Gate Model
+
+In a phase gate process, a project can be terminated by the stakeholders if it is deemed infeasible, not accurate enough, or more information is needed to continue.
+
+Thus, a project can be terminated after the proof of value exercise (if it is deemed infeasible or not worth the expenditure) or after the proof of
+concept (if the data science shows the performance will not meet the need of the application).
+
+![phase gate model](../images/phase-gate-model.png)
+
+## Phase 1: Experimentation
+
+An iterative process that attempts to demonstrate that ML is an effective solution to a problem.
 
 This phase is my current focus - making the tooling and processes as templatable and adhering to development best practices. 
 
-**Production:** The process of converting an ML experiment into a robust form, wrapped around supporting software towards delivering business value. 
-
-At the time of writing, I will adapt the production phase to the needs of the consumer (product team etc) rather than forcing integration with platforms or adapting a fixed point of integration.
-
-## Experimentation
-
-### 1. Discovery
+### 1. Discovery (Proof of Value)
 
 - Understand ROI Potential
 - Understand existing business processes.
@@ -21,16 +29,16 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Define clear problem statement.
 - Research ML approaches to determine feasibility.
 
-### 2. Project Setup
+### 2. Project Setup (Proof of Concept)
 
-- Create repoistory & scaffold the folder structure.
+- Create repository & scaffold the folder structure.
     - Leverage Kedro or other tools to support this process.
-- Environment setup
+- Environment setup consideration:
     - Docker
     - Dependency management (requirements.txt, Poetry etc.)
     - Helper commands - MAKE.
 
-### 3. Data Acquistion
+### 3. Data Acquistion (Proof of Concept)
 
 - Identify constraints on data compliance.
     - PII, GDPR etc.
@@ -48,7 +56,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Is synthetic data required?
 
 
-### 4. EDA
+### 4. EDA (Proof of Concept)
 
 - Data ingestion to a notebook environment.
 - Data cleaning/preprocessing
@@ -59,7 +67,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Does the training data reflect the expected real world data?
 - Data Bias
 
-### 5. Modelling
+### 5. Modelling (Proof of Concept)
 
 - Target variable definition
     - binning etc.
@@ -79,7 +87,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
     - Ensemble, single model, cascading models, rules based alternative?
 - Repoducability of Results.
 
-### 6. Evaluation
+### 6. Evaluation (Proof of Concept)
 
 - XAI
 - Define a no skill model.
@@ -92,7 +100,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Select V1 model.
 - Data drift risk over time.
 
-### 7. Solution Selection
+### 7. Solution Selection (Proof of Concept)
 
 - Consider NFR's
 - Model persistence method.
@@ -100,20 +108,22 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Recall/Precision Trade off.
 - Map solution to ROI impact estimation.
 - Business acceptance.
-- Early of implementation effort from ML perspective.
+- Early indiciation of implementation effort from ML perspective.
     - Automated training required?
 - Independent Review.
 
-## Production
+## Phase 2: Production
 
-### 8. Hardening
+The process of converting an ML experiment into a robust solution, wrapped around supporting software to deliver business value. 
+
+### 8. Hardening (Production Build)
 
 - Unit tests
 - Solidify documentation
 - Functional, clean code.
 - Logging.
 
-### 9. Deployment Plan
+### 9. Deployment Plan (Production Build)
 
 - Establish multi skilled team
 - Design solution architecture
@@ -125,7 +135,7 @@ At the time of writing, I will adapt the production phase to the needs of the co
 - Formal estimation
 - Cost of solution
 
-### 10. Production Phase
+### 10. Solution Build (Production Build)
 
 - Observability
     - Datadog

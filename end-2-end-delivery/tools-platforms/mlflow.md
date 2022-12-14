@@ -1,9 +1,5 @@
 # MLFlow General Thoughts
 
-## Planned Use of MLFlow
-
-At the time of writing MLFlow will **not** be adopted for any part of default Machine Learning Project workflow, due to some of its constraints and benefits of using a managed service like Sagemaker.
-
 ## Pros
 
 - Best in class user interface for experimet tracking.

@@ -1,6 +1,6 @@
 # Mapping MLOps Concepts to Tooling
 
-This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) into core ML-Ops concepts. This also reflects a best efforts attempt at connecting the concepts to tooling to represent what I use today in ML projects.
+This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) into core ML-Ops concepts. This also reflects a best efforts attempt at connecting the concepts to tooling to represent **options** for what I could use today in ML projects. With this in mind, this document is undoubtely a starting reference point rather than a fixed template. 
 
 1. Environment Management
 2. Project Scaffolding
@@ -19,52 +19,54 @@ This document translates the [Machine Learning Lifecycle](../ml-lifecycle.md) in
     - This allows the use of local IDE for ease of debugging and offers greater development agility.
 
 ### Alternative Options
-- Virtual environments.
+- Virtual environments + Makefiles.
 - Anaconda.
+
+### Unknowns
+
+- How to account for platform first development? e.g. developing entirely on Daatbricks or Sagemaker?
 
 ## #2 Project Scaffolding
 
 ### Preferred Options
 - Kedro, in its recommended usage pattern.
-    - Example: ML Mumford Member auto matching project.
+    - Example: Product matching project.
 
 ### Alternative Options
 - Custom project structures.
+- MLFlow project structure.
 
 ## #3 Flexible Compute
 
-### referred Options
-- Sagemaker Notebooks - Studio or managed Notebook instance during the iterative experimentation phase.
-    - If required, running Kedro inside Sagemaker Notebook using the terminal is also an accepted usage pattern as long as credentials are avaliable.
-    - Sagemaker Studio based commits required a personal access token from GitHub.
-- Sagemaker processing and training jobs for "off notebook" workloads.
+### Preferred Options
+- Cloud Notebooks - Studio or managed Notebook instance during the iterative experimentation phase.
+    - If required, running Kedro inside a cloud Notebook using the terminal is also an accepted usage pattern as long as credentials are avaliable.
+- Cloud training jobs for "off notebook" workloads using an SDk. 
 
 ### Alternate Options
-- N/A
-
-### Unknowns
-- Is it possible to get training metrics from Sagemaker training jobs? Beyond simply logging in the training script?
+- Metaflow
+- Flyte
+- Ploomber
 
 ## #4 Artifact Versioning
 
 ### Preferred Options
-- Kedro versioning to cloud storage (S3)
+- Kedro versioning to cloud storage.
 
 ### Alternate Options
-- N/A
-    - Sagemaker Feature Store?
+- MLFlow pipelines?
 
 ## #5 Experiment Tracking
 
 The ability to capture the results of an ML experiment **and** reproduce on demand.
 
 ### Preferred Options
-- Sagemaker Experiment Tracking
-    - Offers the ability to capture metrics from training jobs using Regex and capturing any desired metadata using the Sagemaker SDK. 
+- Cloud vendor experiment tracker via SDK or other means.
 
 ### Alternate Options
-- N/A
-    - DVC Pipelines
+- Sagemaker Experiment Tracking
+    - Offers the ability to capture metrics from training jobs using Regex and capturing any desired metadata using the Sagemaker SDK. 
+- DVC Pipelines
 
 ## #6 Model Monitoring (Observability)
 
@@ -87,8 +89,12 @@ A central pipeline for preparing data and training ML model in a single click/co
 - Kedro
 
 ### Alternate Options
-- DVC?
-- Sagemaker Pipelines?
+- DVC
+- Sagemaker Pipelines
+- MLFlow pipelines
+- Metaflow
+- Flyte
+- Ploomber
 
 ## #8 XAI and Bias
 
@@ -97,7 +103,7 @@ A central pipeline for preparing data and training ML model in a single click/co
     - As it stands, applied only during the experimention phase effectively. 
 
 ### Alternate Options
-- Sagemaker Clarify?
+- Sagemaker Clarify
 - Lime
 
 ## Resources
