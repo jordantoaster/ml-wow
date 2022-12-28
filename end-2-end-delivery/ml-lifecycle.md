@@ -154,6 +154,8 @@ The process of converting an ML experiment into a robust solution, wrapped aroun
 - Web app - load balancers & application gateways (web application firewall), health checks
 - Avaliability zones/regions and redundancy
 - Infrastructure as code (ARM, Terraform or other).
+- Backups
+- Disaster recovery
 
 ## Resources
 
