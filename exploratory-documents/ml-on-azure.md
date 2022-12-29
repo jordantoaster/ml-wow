@@ -39,8 +39,22 @@ General observations...
 | Local Dev  |  X (MLFlow Remote Jobs) | X  |  X |  X | X (send to MLFlow)  |   |   | X (can access blob)  |
 | MLFlow  | X  |   | X (sdk)  | X | X  |   | X  |   |
 
-Clearly lacking some pipelining and versioning strategy, MLflow offers for models, which in theory could be tethered to commit hash but not to data for reproduction - hand cranking needed in any case.
+#### Limitations
 
-Can data factory or Azure ML help fill in the gaps? Maybe even Kedro?
+- Clear code pipeline solution, can Kedro (Kedro MLFlow?) or other fill in this gap? 
+- Automated data versioning -  MLflow offers for models, which in theory could be tethered to commit hash but not to data for reproduction - hand cranking needed in any case.
 
-Relying only on bricks has limits. Lack of unit testing, CI, PR for reviews etc. Lacks all modern development standards for good software if using a notebook only approach. 
+#### Ideas / Thoughts
+
+- Relying only on bricks has limits. Lack of unit testing, CI, PR for reviews etc. Lacks all modern development standards for good software if using a notebook only approach. 
+- Can ML Flow pipelines (experimental) be the pipeline solution? does it allow toggle remote execution for steps? - https://www.mlflow.org/docs/1.28.0/pipelines.html#pipelines - To what extend does this overlap with MLFlow projects?
+
+#### Outcomes
+
+- Use Databricks for notebook analysis and as the MLFlow server (assuming URI can be accessed locally)
+  - https://docs.databricks.com/mlflow/access-hosted-tracking-server.html - env variables and URI on config setup in code.
+- Local development for IDE tooling access and other benefits for development. 
+- Basic virtual environment type pip requirements management.
+- You can run MLFlow jobs on Azure ML remotely via an easy code toggle, but databricks seems a bit more involved: https://docs.databricks.com/mlflow/projects.html
+
+This is not perfect, but offers a decent starting point for trying to build a solution than makes the most of the platform while allowing local development. 
