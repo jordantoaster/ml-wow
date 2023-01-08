@@ -33,6 +33,7 @@
 - Information Retrieval (For text X, give me result Y)
 - Similarity
 - Question Answering
+- Conversational analystic - call centre
 
 ## Other
 
@@ -55,3 +56,4 @@
 - Digital Assistant / Co-bot
 - Personalised Shopping (Review Ordering et al).
 - Satellite sensor for agriculature - soil nutrition monitoring.
+- Automatic Speech Recognition
