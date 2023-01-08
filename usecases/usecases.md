@@ -33,7 +33,7 @@
 - Information Retrieval (For text X, give me result Y)
 - Similarity
 - Question Answering
-- Conversational analystic - call centre
+- Conversational analystic - call centre, agent coaching, sentiment journey.
 
 ## Other
 
