@@ -57,3 +57,5 @@
 - Personalised Shopping (Review Ordering et al).
 - Satellite sensor for agriculature - soil nutrition monitoring.
 - Automatic Speech Recognition
+
+https://research.aimultiple.com/ai-usecases/
