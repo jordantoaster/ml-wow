@@ -57,5 +57,7 @@
 - Personalised Shopping (Review Ordering et al).
 - Satellite sensor for agriculature - soil nutrition monitoring.
 - Automatic Speech Recognition
+- Archive Insights - https://www.microsoft.com/en-us/ai/ai-lab-project-ida
+- Machine Reading Comprehension (ask AI a question about a document) - https://www.microsoft.com/en-us/ai/ai-lab-machine-reading
 
 https://research.aimultiple.com/ai-usecases/
