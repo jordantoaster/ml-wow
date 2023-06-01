@@ -76,6 +76,8 @@ This phase is my current focus - making the tooling and processes as templatable
 - Dimensionality reduction
 - Hyperparameter optimisation
 - Threshold moving
+    - Youdens, GMEAN
+    - Maintain the distributions in test and train
 - Probability calibration
 - Auto ML
     - H20, Auto SkLearn.
@@ -83,6 +85,8 @@ This phase is my current focus - making the tooling and processes as templatable
     - Smote, dropping majority classes etc.
 - Experiment Tracking
 - Model Registry
+- Random noise variable
+- Stratify Data
 - Model types
     - Ensemble, single model, cascading models, rules based alternative?
 - Repoducability of Results.
@@ -91,6 +95,7 @@ This phase is my current focus - making the tooling and processes as templatable
 
 - XAI
 - Define a no skill model.
+    - Baseline loss of the distribution. 
 - Metric Selection (loss)
 - Testing strategy
     - Cross validation
@@ -99,6 +104,7 @@ This phase is my current focus - making the tooling and processes as templatable
 - Compare to human/business process.
 - Select V1 model.
 - Data drift risk over time.
+- Calibration curves
 
 ### 7. Solution Selection (Proof of Concept)
 
