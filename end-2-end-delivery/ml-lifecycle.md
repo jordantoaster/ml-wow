@@ -36,7 +36,9 @@ This phase is my current focus - making the tooling and processes as templatable
 - Environment setup consideration:
     - Docker
     - Dependency management (requirements.txt, Poetry etc.)
+          - Clear versioning.
     - Helper commands - MAKE.
+- Where possible, attach documentation to the repository using Markdown.
 
 ### 3. Data Acquistion (Proof of Concept)
 
@@ -61,6 +63,7 @@ This phase is my current focus - making the tooling and processes as templatable
 - Data ingestion to a notebook environment.
 - Data cleaning/preprocessing
     - Missing values, outliers, data selection, normalisation etc.
+    - Imputation
 - Data Analysis
     - Visualisation, correlation, distirbutions etc.
 - Seasonality
@@ -72,19 +75,27 @@ This phase is my current focus - making the tooling and processes as templatable
 - Target variable definition
     - binning etc.
 - Handling imbalanced data/target variables.
+      - Use sampling techniques to your peril, artificially inflate classification report results, break probabilites and may not scale to real world distributions.
 - Feature engineering and selection
+    - Does the data need to be arranged into time segments? quarters etc.
 - Dimensionality reduction
 - Hyperparameter optimisation
 - Threshold moving
     - Youdens, GMEAN
     - Maintain the distributions in test and train
+        - Test set in particular should always reflect the real world distribution.
 - Probability calibration
 - Auto ML
     - H20, Auto SkLearn.
 - Data augmentation
-    - Smote, dropping majority classes etc.
+    - Smote, dropping majority classes etc (use with care, see above points)
+    - Image flipping etc.
 - Experiment Tracking
 - Model Registry
+- Clustering
+    - Elbow method
+    - PCA/TSNE for visualisation.
+    - Always interpret clusters.
 - Random noise variable
 - Stratify Data
 - Model types
@@ -94,6 +105,7 @@ This phase is my current focus - making the tooling and processes as templatable
 ### 6. Evaluation (Proof of Concept)
 
 - XAI
+      - Standard feature importance may not indicate if an important feature skews to 1 or 0, SHAP or other can add this additional information.
 - Define a no skill model.
     - Baseline loss of the distribution. 
 - Metric Selection (loss)
