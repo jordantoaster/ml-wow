@@ -59,5 +59,6 @@
 - Automatic Speech Recognition
 - Archive Insights - https://www.microsoft.com/en-us/ai/ai-lab-project-ida
 - Machine Reading Comprehension (ask AI a question about a document) - https://www.microsoft.com/en-us/ai/ai-lab-machine-reading
+- Cross and upsell
 
 https://research.aimultiple.com/ai-usecases/
