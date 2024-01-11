@@ -28,6 +28,7 @@ This phase is my current focus - making the tooling and processes as templatable
 - Confirm Avaliability of and access to data.
 - Define clear problem statement.
 - Research ML approaches to determine feasibility.
+- Create a RACI
 
 ### 2. Project Setup (Proof of Concept)
 
